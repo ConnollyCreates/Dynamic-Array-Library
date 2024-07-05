@@ -15,14 +15,17 @@ int main() {
     int arrsize;
     
     printf("Welcome to the Visual Dynamic Array tool to gain a better understanding of how dynamic arrays work\n");
-    printf("Enter how large you would like your array to be");
+    printf("Enter how large you would like your array to be\n");
 
     scanf("%d", &arrsize);
 
-    
+if( arrsize > MAX_SIZE) {
+    printf("Error! Too big of a request\n");
+}
+
     initArray(&a, arrsize);
 
-    printf("An array of size %d has been initiliazed", arrsize);
+    printf("An array of size %d has been initiliazed\n", arrsize);
 
 
     for (int i = 0; i < arrsize; i++) {
